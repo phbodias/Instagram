@@ -1,456 +1,503 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    height: 100px;  /*altura fictícia apenas para que a cor de fundo "pegue" toda a página"*/
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100px; /*altura fictícia apenas para que a cor de fundo "pegue" toda a página"*/
 }
 
-.topo{
+.topo {
+  width: 100%;
+  border: solid 1px #dbdbdb;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.conteudo-topo {
+  width: 935px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.icon-logo {
+  font-size: 19.25px;
+  margin-left: 1px;
+}
+
+.barrinha {
+  margin-top: -2px;
+  margin-right: 1%;
+  margin-left: 1%;
+  width: 11.38px;
+  height: 22px;
+  border-right: solid 1px #dbdbdb;
+}
+
+.logo {
+  width: 11%;
+  height: 29px;
+}
+
+.pesquisar {
+  margin-left: 22.8%;
+  margin-right: 22.8%;
+}
+
+#txtBusca {
+  min-width: 23%;
+  height: 28px;
+  font-size: 12px;
+  text-align: center;
+  color: #fafafa;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+}
+
+.icon-seta {
+  width: 17.86px;
+  margin-right: 2.65%;
+}
+
+.icon-bussola,
+.icon-heart,
+.icon-people,
+.icon-save,
+.icon-coments {
+  font-size: 16.5px;
+  margin-right: 2.72%;
+}
+
+.pagina {
+  width: 100%;
+  background-color: #e5e5e5;
+}
+
+.conteudo {
+  width: 935px;
+  display: flex;
+  margin: 54px auto;
+}
+
+.posts {
+  width: 614px;
+  margin-top: 34px;
+}
+
+.stories {
+  width: 100%;
+  height: 118px;
+  display: flex;
+  background-color: #ffffff;
+  border: solid 1px #dbdbdb;
+  overflow: hidden;
+  position: relative;
+}
+
+.storie {
+  margin-top: 17px;
+  margin-left: 14px;
+  width: 66px;
+  height: 66px;
+  background-image: url("/Images/stories_background.jpg");
+  background-size: 66px;
+  background-repeat: no-repeat;
+  background-position-y: 0;
+  border-radius: 100px;
+}
+
+.stories img {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  margin: 5px;
+}
+
+.usuario {
+  max-width: 78px;
+  height: 19px;
+  justify-content: center;
+  margin-left: 6px;
+  font-size: 12px;
+  line-height: 14.06px;
+  text-align: center;
+  margin-top: 1px;
+}
+
+.seta {
+  position: absolute;
+  top: 46px;
+  left: 94%;
+  font-size: 26px;
+  color: lightgray;
+}
+
+.publicacoes {
+  padding-top: 1px;
+  border: solid 1px #dbdbdb;
+  margin-top: 24px;
+  margin-bottom: 60px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.user {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  position: relative;
+}
+
+.user img {
+  width: 32px;
+  height: 32px;
+  margin-left: 2.8%;
+  margin-right: 2.4%;
+  border-radius: 28px;
+}
+
+.username {
+  max-width: 17.5%;
+  height: 21px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16.41px;
+  color: #262626;
+  margin-right: 5px;
+}
+
+.pontinhos {
+  position: absolute;
+  right: 10px;
+}
+
+.imagem,
+.video {
+  width: 100%;
+}
+
+.interacoes {
+  margin-top: -4px;
+  padding-top: 17.75px;
+  padding-left: 13.88px;
+  font-size: 14px;
+  line-height: 16.41px;
+}
+
+.icons {
+  display: flex;
+  position: relative;
+}
+
+.icon {
+  font-size: 18px;
+  margin-right: 17.81px;
+}
+
+.icon2 {
+  font-size: 18px;
+  position: absolute;
+  right: -4px;
+}
+
+.liked-for {
+  display: flex;
+  margin-bottom: 7px;
+}
+
+.liked-for img {
+  margin-top: 5px;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.liked-for p {
+  display: flex;
+  font-size: 14px;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+.liked-for span {
+  font-weight: bold;
+  margin: 0 3px;
+}
+
+.subtitle {
+  display: flex;
+}
+
+.view-all,
+.ha-x-horas {
+  color: #c7c7c7;
+  font-weight: 300px;
+  margin-bottom: 5px;
+}
+
+.time {
+  font-size: 10px;
+}
+
+.comment {
+  display: flex;
+}
+
+.like {
+  position: absolute;
+  right: -4px;
+}
+
+.add-a-comment {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 13.88px;
+  font-size: 12px;
+}
+
+.icon-happy {
+  font-size: 30px;
+  margin-right: 2%;
+}
+
+.add-a-comment input,
+.button {
+  border: 0;
+  font-size: 14px;
+  color: #b2dffc;
+  background-color: #ffffff;
+}
+
+.add-a-comment {
+  margin-top: 15px;
+  border-top: solid 1px #dbdbdb;
+}
+
+.button {
+  position: absolute;
+  right: 4px;
+  transition: color 0.3s;
+}
+
+button:hover {
+  color: #0095f6;
+}
+
+.sidebar {
+  width: 293px;
+  height: 443px;
+  position: fixed;
+  top: 111px;
+  left: auto;
+  margin-left: 642px;
+}
+
+.perfil {
+  display: flex;
+}
+
+.perfil img {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  margin-right: 17px;
+}
+
+.perfil-user {
+  height: 34px;
+  font-size: 14px;
+  margin-top: 11px;
+}
+
+.nameuser {
+  font-weight: 500;
+}
+
+.name {
+  font-weight: 300;
+  color: #8e8e8e;
+}
+
+.sugestoes-para {
+  margin-top: 24px;
+  display: flex;
+  font-size: 12px;
+}
+
+.sug-vc {
+  color: #8e8e8e;
+}
+
+.ver {
+  font-weight: bold;
+  margin-left: 120px;
+}
+
+.sugestao {
+  margin-top: 17px;
+  display: flex;
+}
+
+.sugestao img {
+  width: 32px;
+  border-radius: 16px;
+}
+
+.sugestao-user {
+  margin: 1px 11px;
+  min-width: 126px;
+}
+
+.suguser {
+  font-size: 14px;
+  font-weight: 500;
+  color: #262626;
+}
+
+.seguevc {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.seguir {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 12px;
+  color: #139ef2;
+  padding-right: 13px;
+}
+
+.sobre {
+  margin-top: 33px;
+  font-size: 11px;
+  line-height: 12.89px;
+  color: #c7c7c7;
+}
+
+.mark_exibido {
+  margin-top: 18px;
+}
+
+.floor {
+  display: none;
+}
+
+@media (max-width: 935px) {
+  .sidebar {
+    display: none;
+  }
+
+  .conteudo-topo {
     width: 100%;
-    border: solid 1px #DBDBDB;
-    background-color: #FFFFFF;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1;
-}
-
-.conteudo-topo{
-    width: 935px;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    margin: auto;
-}
-
-.icon-logo{
-    font-size: 19.25px;
-    margin-left: 1px;
-}
-
-.barrinha{
-    margin-top: -2px;
-    margin-right: 1%;
-    margin-left: 1%;
-    width: 11.38px;
-    height: 22px;
-    border-right: solid 1px #DBDBDB;
-}
-
-.logo{
-    width: 11%;
-    height: 29px;
-}
-
-.pesquisar{
-    margin-left: 22.8%;
-    margin-right: 22.8%;
-}
-
-#txtBusca{
-    min-width: 23%;
-    height: 28px;
-    font-size: 12px;
-    text-align: center;
-    color: #FAFAFA;
-    border-radius: 3px;
-    background-color: #E5E5E5;
-}
-
-.icon-seta{
-    width: 17.86px;
-    margin-right: 2.65%;
-}
-
-.icon-bussola, .icon-heart, .icon-people, .icon-save, .icon-coments{
-    font-size: 16.5px;
-    margin-right: 2.72%;
-}
-
-.pagina{
-    width: 100%;
-    background-color: #E5E5E5;
-}
-
-.conteudo{
-    width: 935px;
-    display: flex;
-    margin: 54px auto;
-}
-
-.posts{
-    width: 614px;
-    margin-top: 34px;
-}
-
-.stories{
-    width: 100%;
-    height: 118px;
-    display: flex;
-    background-color: #FFFFFF;
-    border: solid 1px #DBDBDB;
-    overflow: hidden;
-    position: relative;
-
-}
-
-.storie{
-    margin-top: 17px;
-    margin-left: 14px;
-    width: 66px;
-    height: 66px;
-    background-image: url("/projeto2-instagram/Images/stories_background.jpg");
-    background-size: 66px;
-    background-repeat: no-repeat;
-    background-position-y: 0;
-    border-radius: 100px;
-}
-
-.stories img{
-    width: 56px;
-    height: 56px;
-    border-radius: 28px;
-    margin: 5px;
-
-}
-
-.usuario{
-    max-width: 78px;
-    height: 19px;
     justify-content: center;
-    margin-left: 6px;
-    font-size: 12px;
-    line-height: 14.06px;
-    text-align: center;
-    margin-top: 1px;
-}
+  }
 
-.seta{
-    position: absolute;
-    top: 46px;
-    left: 94%;
-    font-size: 26px;
-    color: lightgray;
-}
-
-.publicacoes{
-    padding-top: 1px;;
-    border: solid 1px #DBDBDB;
-    margin-top: 24px;
-    margin-bottom: 60px;
-    background-color: #FFFFFF;
-    position: relative;
-}
-
-.user{
-    display: flex;
-    height: 60px;
-    align-items: center;
-    position: relative;
-}
-
-.user img{
-    width: 32px;
-    height: 32px;
-    margin-left: 2.8%;
-    margin-right: 2.4%;
-    border-radius: 28px;
-}
-
-.username{
-    max-width: 17.5%;
-    height: 21px;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 16.41px;
-    color: #262626;
-    margin-right: 5px;
-}
-
-.pontinhos{
-    position: absolute;
-    right: 10px;
-}
-
-.imagem, .video{
+  .conteudo {
     width: 100%;
-}
+    justify-content: center;
+  }
 
-.interacoes{
-    margin-top: -4px;
-    padding-top: 17.75px;
-    padding-left: 13.88px;
-    font-size: 14px;
-    line-height: 16.41px;
-}
+  .pesquisar {
+    margin-left: 18.9%;
+    margin-right: 18.9%;
+  }
 
-.icons{
-    display: flex;
-    position: relative;
-}
-
-.icon{
-    font-size: 18px;
-    margin-right: 17.81px;
-}
-
-.icon2{
-    font-size: 18px;
-    position: absolute;
-    right: -4px;
-}
-
-.liked-for{
-    display: flex;
-    margin-bottom: 7px;
-}
-
-.liked-for img{
-    margin-top: 5px;
-    border-radius: 10px;
-    width: 20px;
-    height: 20px;
-}
-
-.liked-for p{
-    display: flex;
-    font-size: 14px;
-    margin-top: 7px;
-    margin-left: 5px;
-}
-
-.subtitle{
-    display: flex;
-}
-
-.view-all, .ha-x-horas{
-    color: #C7C7C7;
-    font-weight: 300px;
-    margin-bottom: 5px;
-}
-
-.time{
-    font-size: 10px;
-}
-
-.comment{
-    display: flex;
-}
-
-.like{
-    position: absolute;
-    right: -4px;
-}
-
-.add-a-comment{
+  .posts {
     width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 10px 13.88px;
-    font-size: 12px;
+    max-width: 614px;
+  }
+
+  .floor {
+    display: none;
+  }
 }
 
-.icon-happy{
-    font-size: 30px;
-    margin-right: 2%;
-}
+@media (max-width: 614px) {
+  .barrinha,
+  .pesquisar,
+  .icon-bussola,
+  .heart-topo,
+  .icon-people {
+    display: none;
+  }
 
-.add-a-comment input, .button{
+  .conteudo-topo {
+    margin-left: 9px;
+  }
+
+  .icon-logo {
+    position: absolute;
+    left: 3px;
+  }
+
+  .logo {
+    position: absolute;
+    left: 37%;
+  }
+
+  .seta-topo {
+    position: absolute;
+    right: 3px;
+  }
+
+  .pagina {
+    background-color: #ffffff;
+  }
+
+  .posts {
+    margin-top: 0;
+  }
+
+  .seta {
+    display: none;
+  }
+
+  .publicacoes {
+    margin: 0;
     border: 0;
-    font-size: 14px;
-    color: #B2DFFC;
-    background-color: #FFFFFF;
-}
+  }
 
-.add-a-comment{
-    margin-top: 15px;
-    border-top: solid 1px #DBDBDB;
-}
+  .imagem,
+  .video {
+    width: 100%;
+  }
 
-.button{
-    position: absolute;
-    right: 4px;
-    transition: color 0.3s;
-}
+  .video {
+    margin-top: -60px; /*Na versão mobile os vídeos aparecem com o usuario contido (pelo menos no meu ta assim haha)*/
+  }
 
-button:hover{
-    color: #0095F6;
-}
+  .add-a-comment {
+    margin-top: -5px;
+    margin-bottom: -5px;
+    border: 0;
+  }
 
-.sidebar{
-    width: 293px;
-    height: 443px;
-    position: fixed;
-    top: 111px;
-    left: auto;
-    margin-left: 642px;
-}
-
-.perfil{
-    display: flex;
-}
-
-.perfil img{
-    width: 56px;
+  .floor {
     height: 56px;
-    border-radius: 28px;
-    margin-right: 17px;
-}
-
-.perfil-user{
-    height: 34px;
-    font-size: 14px;
-    margin-top: 11px;
-}
-
-.nameuser{
-    font-weight: 500;
-}
-
-.name{
-    font-weight: 300;
-    color: #8E8E8E;
-}
-
-.sugestoes-para{
-    margin-top: 24px;
-    display: flex;
-    font-size: 12px;
-}
-
-.sug-vc{
-    color: #8E8E8E;
-}
-
-.ver{
-    font-weight: bold;
-    margin-left: 120px;
-}
-
-.sugestao{
-    margin-top: 17px;
-    display: flex;
-}
-
-.sugestao img{
-    width: 32px;
-    border-radius: 16px;
-}
-
-.sugestao-user{
-    margin: 1px 11px;
-    min-width: 126px;
-}
-
-.suguser{
-    font-size: 14px;
-    font-weight: 500;
-    color: #262626;
-}
-
-.seguevc{
-    font-size: 12px;
-    color: #8E8E8E;
-}
-
-.seguir{
+    position: fixed;
+    bottom: 0;
     width: 100%;
     display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    border-top: 1px solid #dbdbdb;
     align-items: center;
-    justify-content: end;
-    font-size: 12px;
-    color: #139EF2;
-    padding-right: 13px;
-}
+  }
 
-.sobre{
-    margin-top: 33px;
-    font-size: 11px;
-    line-height: 12.89px;
-    color: #C7C7C7;
-}
+  .icon-floor {
+    font-size: 30px;
+  }
 
-.mark_exibido{
-    margin-top: 18px;
-}
-
-@media (max-width: 935px){
-    .sidebar{
-        display: none;
-    }
-
-    .conteudo-topo{
-        width: 100%;
-        justify-content: center;
-    }
-
-    .conteudo{
-        width: 100%;
-        justify-content: center;
-    }
-
-    .pesquisar{
-        margin-left: 18.9%;
-        margin-right: 18.9%;
-    }
-
-    .posts{
-        width: 100%;
-        max-width: 614px;
-    }
-}
-
-@media (max-width: 614px){
-
-    
-    .barrinha, .pesquisar, .icon-bussola, .heart-topo, .icon-people{
-        display: none;
-    }
-
-    .conteudo-topo{
-        margin-left: 9px;
-    }
-
-    .icon-logo{
-        position: absolute;
-        left: 3px;
-    }
-
-    .seta-topo{
-        position: absolute;
-        right: 3px;
-    }
-
-    .pagina{
-        background-color: #FFFFFF;
-    }
-
-
-
-
-
-
-
-    
-    .posts{
-        margin-top: 0;
-    }
-
-    .stories{
-        background-color: #E5E5E5;
-    }
-
-    .seta{
-        display: none;
-    }
-
-    .publicacoes{
-        margin-top: 0;
-    }
-
-    .imagem, .video{
-        width: 100%;
-    }
+  .floor img {
+    height: 30px;
+    border-radius: 28px;
+  }
 }
